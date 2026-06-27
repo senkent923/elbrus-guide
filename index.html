@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Восхождение на Эльбрус — гид для начинающих альпинистов</title>
+  <meta name="description" content="Полный путеводитель для новичков, планирующих первое восхождение на Эльбрус (5642 м): маршрут, подготовка, снаряжение и ответы на главные вопросы." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><polygon points='16,4 28,28 4,28' fill='%23E8622A'/></svg>" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 34L15 12l6 11 4-6 11 17H4z" fill="#E8622A"/>
+          <path d="M15 12l6 11-3.5.5L13 16l2-4z" fill="#fff" fill-opacity=".85"/>
+          <circle cx="31" cy="9" r="4" fill="#f5894f"/>
+        </svg>
+        <span>Эльбрус<b style="color:var(--sunrise)">.</b>Гид</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Главная</a></li>
+          <li><a href="preparation.html">Подготовка</a></li>
+          <li><a href="gear.html">Снаряжение</a></li>
+          <li><a href="#pricing">Цены</a></li>
+          <li><a href="faq.html">Вопросы</a></li>
+          <li class="nav-cta"><a href="#apply" class="btn btn-primary">Начать подготовку</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-art" aria-hidden="true">
+      <!-- финальный кадр интро: та же гора плавно переходит на герой -->
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="hSky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0A1020"/>
+            <stop offset="0.45" stop-color="#1A2845"/>
+            <stop offset="0.70" stop-color="#6B2D8A"/>
+            <stop offset="0.86" stop-color="#C44A1A"/>
+            <stop offset="1" stop-color="#E8622A"/>
+          </linearGradient>
+          <radialGradient id="hSun" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#FFD9A0"/>
+            <stop offset="0.45" stop-color="#FFB347"/>
+            <stop offset="1" stop-color="#E8622A"/>
+          </radialGradient>
+          <radialGradient id="hGlow" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#FFB347" stop-opacity="0.5"/>
+            <stop offset="0.5" stop-color="#E8622A" stop-opacity="0.18"/>
+            <stop offset="1" stop-color="#E8622A" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="hGold" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#FBE6C0"/>
+            <stop offset="1" stop-color="#E8A765"/>
+          </linearGradient>
+        </defs>
+        <rect width="1440" height="900" fill="url(#hSky)"/>
+        <!-- утренние звёзды -->
+        <g fill="#ffffff" opacity="0.5">
+          <circle cx="120" cy="70" r="2"/><circle cx="300" cy="120" r="1.5"/><circle cx="520" cy="60" r="2"/>
+          <circle cx="900" cy="90" r="1.5"/><circle cx="1100" cy="150" r="2"/><circle cx="1250" cy="80" r="1.5"/>
+          <circle cx="760" cy="140" r="1.5"/><circle cx="180" cy="180" r="1.5"/><circle cx="1330" cy="200" r="1.5"/><circle cx="640" cy="100" r="1.5"/>
+        </g>
+        <!-- свечение и лучи восхода за горой -->
+        <circle cx="605" cy="470" r="360" fill="url(#hGlow)"/>
+        <g stroke="#FFB347" stroke-opacity="0.16" stroke-width="3">
+          <path d="M605 470 L240 60"/><path d="M605 470 L470 -40"/><path d="M605 470 L720 -40"/><path d="M605 470 L980 80"/>
+          <path d="M605 470 L120 360"/><path d="M605 470 L1180 300"/><path d="M605 470 L1320 470"/><path d="M605 470 L40 520"/>
+        </g>
+        <circle cx="605" cy="470" r="92" fill="url(#hSun)"/>
+        <!-- силуэт Эльбруса (тот же, что в интро) -->
+        <path d="M0 900 L0 740 L230 600 L430 665 L540 540 L610 430 L690 500 L770 455 L860 545 L1010 500 L1180 640 L1320 575 L1440 680 L1440 900 Z" fill="#080F1A"/>
+        <!-- золотые снежные шапки (shimmer) -->
+        <path class="snowcap" d="M560 505 L610 430 L662 492 L632 504 L610 472 L586 500 Z" fill="url(#hGold)"/>
+        <path class="snowcap" d="M735 512 L770 455 L814 516 L790 506 L770 480 L752 508 Z" fill="url(#hGold)"/>
+        <!-- оранжевый rim-light на солнечных склонах -->
+        <g fill="#E8622A" fill-opacity="0.42">
+          <path d="M540 540 L610 430 L620 438 L552 547 Z"/>
+          <path d="M690 500 L770 455 L778 463 L698 508 Z"/>
+          <path d="M230 600 L430 665 L430 678 L232 614 Z" fill-opacity="0.18"/>
+        </g>
+        <!-- затемнение переднего плана -->
+        <path d="M0 900 L0 860 L420 800 L860 850 L1440 820 L1440 900 Z" fill="#060B14" opacity="0.85"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="hero-inner reveal">
+        <span class="eyebrow">Высочайшая вершина Европы · 5 642 м</span>
+        <h1>Твоё первое <span class="accent">восхождение</span> на Эльбрус</h1>
+        <p>Пошаговый путеводитель для новичков: от первой тренировки до момента, когда ты стоишь на вершине и встречаешь рассвет над Кавказом.</p>
+        <div class="hero-actions">
+          <a href="#apply" class="btn btn-primary">
+            Начать подготовку
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#route" class="btn btn-ghost">Изучить маршрут</a>
+        </div>
+        <div class="hero-meta">
+          <div><span data-count="5642">5 642</span><small>метров над уровнем моря</small></div>
+          <div><span>~7 дней</span><small>программа с акклиматизацией</small></div>
+          <div><span>2 пика</span><small>западный и восточный</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROUTE ===== -->
+  <section class="section route" id="route">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow">Классический маршрут с юга</span>
+        <h2 class="section-title">Путь к вершине — четыре ключевых этапа</h2>
+        <p class="section-lead">Южный маршрут — самый популярный и безопасный для новичков. Вот как выглядит дорога наверх — от зелёной поляны до седой вершины.</p>
+      </div>
+
+      <!-- фото маршрута -->
+      <div class="gallery">
+        <figure class="photo reveal">
+          <span class="photo-num">1</span>
+          <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Поляна Азау">
+            <defs>
+              <linearGradient id="az-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a5a7a"/><stop offset="1" stop-color="#9fc0d4"/></linearGradient>
+              <linearGradient id="az-mt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dce6ee"/><stop offset="1" stop-color="#7d93ab"/></linearGradient>
+            </defs>
+            <rect width="640" height="400" fill="url(#az-sky)"/>
+            <circle cx="500" cy="80" r="40" fill="#fbe8c8" opacity=".7"/>
+            <path d="M0 200 L120 90 L200 150 L300 60 L360 110 L460 70 L560 140 L640 100 V260 H0Z" fill="url(#az-mt)"/>
+            <path d="M300 60 L360 110 L335 124 L300 95Z" fill="#fff"/>
+            <path d="M120 90 L165 122 L140 138 L120 120Z" fill="#fff" opacity=".9"/>
+            <path d="M0 230 L160 200 L340 235 L520 205 L640 230 V400 H0Z" fill="#2f6b4a"/>
+            <path d="M0 290 L200 270 L420 300 L640 280 V400 H0Z" fill="#245539"/>
+            <g fill="#173d29"><path d="M70 300 l16 30 h-32z"/><path d="M70 285 l13 26 h-26z"/><path d="M120 315 l18 34 h-36z"/><path d="M120 298 l14 28 h-28z"/><path d="M540 305 l16 32 h-32z"/><path d="M540 290 l13 26 h-26z"/><path d="M585 320 l18 34 h-36z"/></g>
+            <line x1="40" y1="150" x2="600" y2="220" stroke="#0d1520" stroke-width="2" opacity=".6"/>
+            <g transform="translate(300,178) rotate(7)"><rect x="-22" y="-3" width="44" height="3" fill="#0d1520"/><rect x="-18" y="0" width="36" height="22" rx="5" fill="#E8622A"/><rect x="-12" y="5" width="24" height="11" rx="2" fill="#0f1722" opacity=".5"/></g>
+          </svg>
+          <figcaption class="photo-cap"><span class="alt">2 350 м · старт</span><h4>Поляна Азау</h4><p>Зелёная долина у подножия. Отсюда канатная дорога поднимает к снеговой линии.</p></figcaption>
+        </figure>
+
+        <figure class="photo reveal">
+          <span class="photo-num">2</span>
+          <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Приют на снегу">
+            <defs>
+              <linearGradient id="pr-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#27405c"/><stop offset="1" stop-color="#6f93b4"/></linearGradient>
+              <linearGradient id="pr-snow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef4f9"/><stop offset="1" stop-color="#c2d2e0"/></linearGradient>
+            </defs>
+            <rect width="640" height="400" fill="url(#pr-sky)"/>
+            <path d="M-20 240 L160 110 L230 150 L300 70 L340 95 L380 60 L430 95 L520 150 L660 110 V260 H-20Z" fill="#b9c8d8"/>
+            <path d="M300 70 L340 95 L380 60 L405 80 L360 100 L320 90Z" fill="#fff"/>
+            <path d="M160 110 L200 138 L175 150 L160 132Z" fill="#fff"/>
+            <rect y="210" width="640" height="190" fill="url(#pr-snow)"/>
+            <path d="M0 250 Q160 230 320 252 T640 248 V400 H0Z" fill="#dbe6ef"/>
+            <g><ellipse cx="150" cy="305" rx="55" ry="26" fill="#7c8a9f"/><rect x="95" y="270" width="110" height="36" rx="18" fill="#9aa9bd"/><ellipse cx="150" cy="270" rx="55" ry="20" fill="#b3c0d0"/><rect x="135" y="282" width="30" height="20" rx="3" fill="#2a3445"/></g>
+            <g><rect x="270" y="285" width="92" height="32" rx="16" fill="#E8622A"/><ellipse cx="316" cy="285" rx="46" ry="17" fill="#f5894f"/><rect x="302" y="296" width="26" height="18" rx="3" fill="#2a3445"/></g>
+            <path d="M430 318 L470 268 L510 318Z" fill="#d4533f"/><path d="M470 268 L510 318 L495 318 L470 285Z" fill="#b8402f"/>
+            <g fill="#1a2433"><circle cx="225" cy="318" r="5"/><rect x="221" y="322" width="8" height="16" rx="3"/></g>
+            <g fill="#E8622A"><circle cx="245" cy="320" r="5"/><rect x="241" y="324" width="8" height="15" rx="3"/></g>
+          </svg>
+          <figcaption class="photo-cap"><span class="alt">3 800 м · базовый лагерь</span><h4>Приют и «бочки»</h4><p>Ночёвки на снегу под двуглавой вершиной. Отсюда выходят на акклиматизацию и штурм.</p></figcaption>
+        </figure>
+
+        <figure class="photo reveal">
+          <span class="photo-num">3</span>
+          <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Скалы Пастухова">
+            <defs>
+              <linearGradient id="ps-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d3454"/><stop offset="1" stop-color="#5b80a6"/></linearGradient>
+              <linearGradient id="ps-slope" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e7eef5"/><stop offset="1" stop-color="#a9bccd"/></linearGradient>
+            </defs>
+            <rect width="640" height="400" fill="url(#ps-sky)"/>
+            <path d="M0 400 L0 160 L640 30 L640 400Z" fill="url(#ps-slope)"/>
+            <path d="M0 400 L0 220 L640 120 L640 400Z" fill="#c5d4e2" opacity=".7"/>
+            <g fill="#3a4453"><path d="M360 205 l34 -6 18 16 -10 18 -40 4 -14 -16z"/><path d="M410 220 l30 -4 14 14 -8 14 -32 2z"/><path d="M330 230 l24 -4 12 12 -8 12 -26 2z"/></g>
+            <g fill="#222b38"><path d="M372 210 l18 -3 9 9 -6 8 -18 1z"/><path d="M418 226 l14 -2 7 7 -5 7 -16 1z"/></g>
+            <g stroke="#0d1520" stroke-width="2" fill="none"><path d="M150 300 Q180 285 210 272 T270 248"/></g>
+            <g fill="#E8622A"><circle cx="150" cy="300" r="6"/><rect x="145" y="305" width="10" height="18" rx="4"/></g>
+            <g fill="#2a3445"><circle cx="210" cy="272" r="6"/><rect x="205" y="277" width="10" height="17" rx="4"/></g>
+            <g fill="#d4533f"><circle cx="270" cy="248" r="6"/><rect x="265" y="253" width="10" height="16" rx="4"/></g>
+            <g stroke="#fff" stroke-width="2" opacity=".4" stroke-linecap="round"><path d="M460 120 h70"/><path d="M480 140 h55"/><path d="M500 100 h45"/></g>
+          </svg>
+          <figcaption class="photo-cap"><span class="alt">4 700 м · акклиматизация</span><h4>Скалы Пастухова</h4><p>Крутой снежно-ледовый рубеж. Здесь в связке и кошках проверяется готовность к штурму.</p></figcaption>
+        </figure>
+
+        <figure class="photo reveal">
+          <span class="photo-num">4</span>
+          <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Вершина на рассвете">
+            <defs>
+              <linearGradient id="sm-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#162038"/><stop offset=".5" stop-color="#9c5a3c"/><stop offset="1" stop-color="#E8622A"/></linearGradient>
+              <radialGradient id="sm-sun" cx=".5" cy=".62" r=".4"><stop offset="0" stop-color="#ffd9a0"/><stop offset="1" stop-color="#E8622A" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="640" height="400" fill="url(#sm-sky)"/>
+            <ellipse cx="320" cy="250" rx="240" ry="160" fill="url(#sm-sun)"/>
+            <circle cx="320" cy="250" r="46" fill="#ffe6bf"/>
+            <path d="M0 300 Q90 278 180 298 T360 296 T540 300 T640 296 V400 H0Z" fill="#cdb39a" opacity=".55"/>
+            <path d="M0 330 Q120 312 240 330 T480 328 T640 332 V400 H0Z" fill="#e9d2b6" opacity=".5"/>
+            <path d="M0 400 L0 340 L160 300 L300 332 L320 300 L360 330 L520 296 L640 340 V400Z" fill="#241522"/>
+            <path d="M240 340 L320 250 L400 340Z" fill="#1a1018"/>
+            <path d="M320 250 L360 295 L335 305 L320 278Z" fill="#5a3a2a" opacity=".6"/>
+            <g transform="translate(320,250)" fill="#0d0a10"><circle cx="0" cy="-30" r="7"/><rect x="-5" y="-24" width="10" height="22" rx="4"/><path d="M-4 -20 L-18 -34" stroke="#0d0a10" stroke-width="5" stroke-linecap="round"/><path d="M4 -20 L18 -34" stroke="#0d0a10" stroke-width="5" stroke-linecap="round"/><rect x="-5" y="-3" width="5" height="16" rx="2"/><rect x="2" y="-3" width="5" height="16" rx="2"/></g>
+            <g transform="translate(345,228)"><rect x="0" y="-2" width="2.5" height="26" fill="#0d0a10"/><path d="M2.5 -2 L20 4 L2.5 10Z" fill="#E8622A"/></g>
+          </svg>
+          <figcaption class="photo-cap"><span class="alt">5 642 м · западная вершина</span><h4>Рассвет на вершине</h4><p>Финальная точка. Облачное море под ногами и весь Кавказ как на ладони.</p></figcaption>
+        </figure>
+      </div>
+
+      <div class="stages" style="margin-top:48px">
+        <article class="stage reveal">
+          <svg class="stage-icon" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-9 4 5 3-4 5 8H3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="6" r="2" stroke="currentColor" stroke-width="1.7"/></svg>
+          <span class="alt">2 350 м</span>
+          <h3>Поляна Азау</h3>
+          <p>Старт у подножия. Канатная дорога поднимает к станции «Гарабаши». Здесь начинается высота.</p>
+        </article>
+        <article class="stage reveal">
+          <svg class="stage-icon" viewBox="0 0 24 24" fill="none"><path d="M4 20l8-14 8 14H4z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 20v-5h6v5" stroke="currentColor" stroke-width="1.7"/></svg>
+          <span class="alt">3 800 – 4 100 м</span>
+          <h3>Приют 11 / бочки</h3>
+          <p>Базовый лагерь и ночёвки. Отсюда выходят на акклиматизационные выходы и штурм вершины.</p>
+        </article>
+        <article class="stage reveal">
+          <svg class="stage-icon" viewBox="0 0 24 24" fill="none"><path d="M2 21l5-8 3 4 4-7 8 11H2z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          <span class="alt">4 600 – 5 100 м</span>
+          <h3>Скалы Пастухова</h3>
+          <p>Главный акклиматизационный рубеж. Крутой снежно-ледовый склон, где проверяется готовность.</p>
+        </article>
+        <article class="stage reveal">
+          <svg class="stage-icon" viewBox="0 0 24 24" fill="none"><path d="M12 3l3 6 6 .8-4.5 4.2 1.2 6L12 17l-5.9 3 1.2-6L3 9.8 9 9z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <span class="alt">5 642 м</span>
+          <h3>Западная вершина</h3>
+          <p>Финальный взлёт через седловину. Та самая точка, ради которой всё это затевалось.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PREP CARDS ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow">С чего начать</span>
+        <h2 class="section-title">Три кита успешного восхождения</h2>
+        <p class="section-lead">Эльбрус не требует альпинистского опыта, но требует серьёзной подготовки по трём направлениям.</p>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M6 4v7a6 6 0 0012 0V4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 20h6M12 17v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h3>Физическая форма</h3>
+          <p>Выносливость важнее силы. Кардио, длинные походы с рюкзаком и работа с ногами за 3 месяца до старта.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Акклиматизация</h3>
+          <p>Главная причина неудач — высота. Постепенный набор и принцип «работай высоко, спи низко» спасают восхождение.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 7l2 13h12l2-13M9 7V5a3 3 0 016 0v2" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+          <h3>Снаряжение</h3>
+          <p>Правильная экипировка — вопрос не комфорта, а безопасности. Многослойность, кошки, ледоруб и тёплые ботинки.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="section stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat reveal"><div class="num" data-count="5642">5 642</div><div class="label">метров — высота западной вершины</div></div>
+        <div class="stat reveal"><div class="num">~50%</div><div class="label">новичков доходят без должной акклиматизации</div></div>
+        <div class="stat reveal"><div class="num">6–9</div><div class="label">часов занимает штурмовой выход</div></div>
+        <div class="stat reveal"><div class="num">−25 °C</div><div class="label">и ниже на вершине с учётом ветра</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GEAR PREVIEW ===== -->
+  <section class="section gear">
+    <div class="container">
+      <div class="gear-wrap">
+        <div class="reveal">
+          <span class="eyebrow">Что взять с собой</span>
+          <h2 class="section-title">Снаряжение, без которого не обойтись</h2>
+          <p class="section-lead" style="margin-bottom:32px">Базовый набор для штурма вершины. Полный чек-лист с категориями, брендами и ценами — на отдельной странице.</p>
+          <ul class="gear-list">
+            <li>
+              <span class="gear-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-11" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Двойные высотные ботинки + кошки</strong><span>Жёсткая подошва под автоматические кошки</span></div>
+            </li>
+            <li>
+              <span class="gear-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-11" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Многослойная одежда</strong><span>Термобельё, флис, мембрана, пуховка</span></div>
+            </li>
+            <li>
+              <span class="gear-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-11" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Ледоруб и страховочная система</strong><span>Для самозадержания и связки</span></div>
+            </li>
+            <li>
+              <span class="gear-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-11" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <div><strong>Очки категории 4 и маска</strong><span>Защита от снежной слепоты и ветра</span></div>
+            </li>
+          </ul>
+          <a href="gear.html" class="btn btn-primary" style="margin-top:30px">Полный чек-лист снаряжения
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="gear-figure reveal" aria-hidden="true">
+          <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26344a"/><stop offset="1" stop-color="#19222f"/></linearGradient>
+            </defs>
+            <circle cx="210" cy="210" r="190" fill="#16202e"/>
+            <circle cx="210" cy="210" r="190" fill="none" stroke="rgba(232,98,42,.25)" stroke-width="2" stroke-dasharray="6 10"/>
+            <!-- backpack -->
+            <rect x="140" y="120" width="140" height="200" rx="34" fill="url(#bag)" stroke="rgba(232,237,242,.12)" stroke-width="2"/>
+            <rect x="168" y="150" width="84" height="70" rx="14" fill="#0f1722"/>
+            <rect x="168" y="150" width="84" height="70" rx="14" fill="none" stroke="rgba(232,98,42,.5)" stroke-width="2"/>
+            <path d="M150 130c8-26 104-26 120 0" fill="none" stroke="#E8622A" stroke-width="6" stroke-linecap="round"/>
+            <rect x="184" y="244" width="52" height="40" rx="10" fill="#0f1722"/>
+            <line x1="210" y1="232" x2="210" y2="300" stroke="rgba(232,237,242,.15)" stroke-width="3"/>
+            <!-- ice axe -->
+            <g transform="rotate(28 300 210)">
+              <rect x="296" y="120" width="9" height="180" rx="4" fill="#7a8aa0"/>
+              <path d="M280 120c12-14 36-14 44 4l-16 8c-6-10-18-10-28-12z" fill="#E8622A"/>
+            </g>
+            <!-- crampon dots -->
+            <g fill="#E8622A">
+              <circle cx="120" cy="330" r="6"/><circle cx="150" cy="345" r="6"/><circle cx="180" cy="330" r="6"/>
+            </g>
+            <!-- snow particles -->
+            <g fill="#E8EDF2" opacity=".6"><circle cx="90" cy="120" r="4"/><circle cx="330" cy="90" r="3"/><circle cx="350" cy="300" r="4"/><circle cx="80" cy="260" r="3"/></g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="section pricing" id="pricing">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow">Сколько стоит</span>
+        <h2 class="section-title">Цены на восхождение</h2>
+        <p class="section-lead">Три формата под разный бюджет. Цены — ориентир по сезону 2025 года для южного маршрута; они зависят от оператора, дат и курса, поэтому всегда уточняйте, что именно входит.</p>
+      </div>
+      <div class="plans">
+        <div class="plan reveal">
+          <h3>Самостоятельно</h3>
+          <p class="plan-sub">Без турфирмы, своими силами и с частным гидом на штурм</p>
+          <div class="amount">от 40 000 <small>₽</small></div>
+          <div class="per">за восхождение, без перелёта</div>
+          <ul>
+            <li>Проживание в приюте / хостеле</li>
+            <li>Канатная дорога и ратрак</li>
+            <li>Аренда снаряжения на месте</li>
+            <li>Частный гид на день штурма</li>
+            <li class="no">Питание и трансферы</li>
+            <li class="no">Сопровождение всю программу</li>
+          </ul>
+          <button type="button" class="btn btn-ghost" style="justify-content:center" data-tariff="Самостоятельно">Выбрать тариф</button>
+        </div>
+
+        <div class="plan featured reveal">
+          <span class="plan-badge">Выбор новичка</span>
+          <h3>Групповой тур</h3>
+          <p class="plan-sub">«Всё включено» с гидами и акклиматизацией, 7–9 дней</p>
+          <div class="amount">110 000 – 140 000 <small>₽</small></div>
+          <div class="per">за человека · 7–9 дней</div>
+          <ul>
+            <li>Профессиональные гиды (1 на 3–4 чел.)</li>
+            <li>Проживание и питание на горе</li>
+            <li>Трансферы от аэропорта</li>
+            <li>Программа акклиматизации</li>
+            <li>Базовое снаряжение и страховка</li>
+            <li>Акклиматизационные выходы</li>
+          </ul>
+          <button type="button" class="btn btn-primary" style="justify-content:center" data-tariff="Групповой тур">Начать подготовку</button>
+        </div>
+
+        <div class="plan reveal">
+          <h3>Индивидуально</h3>
+          <p class="plan-sub">Личный гид только под вас, гибкий график</p>
+          <div class="amount">от 290 000 <small>₽</small></div>
+          <div class="per">за восхождение, персональный формат</div>
+          <ul>
+            <li>Гид работает только с вами</li>
+            <li>Свой темп и расписание</li>
+            <li>Максимум внимания и шансов</li>
+            <li>Питание, проживание, трансферы</li>
+            <li>Полное сопровождение и страховка</li>
+            <li class="no">Низкая цена</li>
+          </ul>
+          <button type="button" class="btn btn-ghost" style="justify-content:center" data-tariff="Индивидуально">Выбрать тариф</button>
+        </div>
+      </div>
+
+      <div class="price-note reveal">
+        <h3 style="font-size:1.15rem;margin-bottom:8px">Что почти всегда оплачивается отдельно</h3>
+        <p>Сверх стоимости тура заложите эти расходы — они есть почти в любой программе:</p>
+        <div class="extra-costs">
+          <span><b>Перелёт</b> до Минвод + трансфер</span>
+          <span><b>Ратрак</b> на штурме ~15–25 тыс. ₽</span>
+          <span><b>Личное снаряжение</b> или его аренда</span>
+          <span><b>Страховка</b> с высотой и вертолётной эвакуацией</span>
+          <span><b>Питание</b> в дни до и после программы</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section cta">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="cta-inner reveal">
+        <span class="eyebrow" style="justify-content:center">Готов начать?</span>
+        <h2>Вершина ближе, чем кажется</h2>
+        <p>Составь план подготовки уже сегодня. Три месяца дисциплины — и Эльбрус из мечты превращается в реальную цель.</p>
+        <div class="hero-actions" style="justify-content:center">
+          <a href="#apply" class="btn btn-primary">Начать подготовку</a>
+          <a href="faq.html" class="btn btn-ghost">Частые вопросы</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APPLY FORM ===== -->
+  <section class="section apply" id="apply">
+    <div class="apply-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="apply-wrap">
+        <div class="apply-info reveal">
+          <span class="eyebrow">Оставить заявку</span>
+          <h2 class="section-title">Готов идти на Эльбрус?</h2>
+          <p class="section-lead" style="margin-bottom:0">Оставь заявку — подберём программу под твой уровень, ответим на вопросы и свяжемся, чтобы обсудить даты и детали восхождения.</p>
+          <ul class="apply-points">
+            <li>Поможем выбрать тариф и сроки под твою форму</li>
+            <li>Подскажем по снаряжению и подготовке</li>
+            <li>Никакого спама — только по делу о восхождении</li>
+          </ul>
+          <p class="apply-contact">Или напиши напрямую: <a href="mailto:elbrusfornew@gmail.com">elbrusfornew@gmail.com</a></p>
+        </div>
+
+        <form class="apply-form reveal" id="applyForm" novalidate>
+          <div class="field">
+            <label for="f-name">Имя <span class="req">*</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Как к тебе обращаться" required />
+            <span class="err">Укажи имя</span>
+          </div>
+          <div class="field">
+            <label for="f-email">Почта <span class="req">*</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required />
+            <span class="err">Укажи корректную почту</span>
+          </div>
+          <div class="field">
+            <label for="f-tg">Telegram</label>
+            <input id="f-tg" name="telegram" type="text" placeholder="@username" />
+            <span class="err">Проверь ник</span>
+          </div>
+          <div class="field">
+            <label for="f-tariff">Тариф на гору <span class="req">*</span></label>
+            <select id="f-tariff" name="tariff" required>
+              <option value="" disabled selected>Выбери программу</option>
+              <option value="Самостоятельно">Самостоятельно — от 40 000 ₽</option>
+              <option value="Групповой тур">Групповой тур — 110 000–140 000 ₽</option>
+              <option value="Индивидуально">Индивидуально — от 290 000 ₽</option>
+              <option value="Пока не решил">Пока не решил — нужна консультация</option>
+            </select>
+            <span class="err">Выбери тариф</span>
+          </div>
+          <div class="field field-full">
+            <label for="f-exp">Опыт восхождений</label>
+            <textarea id="f-exp" name="experience" rows="4" placeholder="Если опыт есть — расскажи: какие вершины, высоты, походы. Если нет — так и напиши, это нормально для первого Эльбруса."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary apply-submit">Отправить заявку
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="apply-note">Нажимая кнопку, ты соглашаешься, что мы свяжемся с тобой по указанным контактам.</p>
+          <div class="apply-success">
+            <div class="ok-mark"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5 9-11" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Спасибо, <span data-name>друг</span>!</h3>
+            <p>Заявка принята. Мы свяжемся с тобой по почте или в Telegram, чтобы обсудить детали восхождения.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTS (угол внизу) ===== -->
+  <div class="contacts-strip">
+    <div class="container">
+      <aside class="contacts-card reveal" id="contacts">
+        <span class="contacts-tab">Наши контакты</span>
+        <ul class="contacts-list">
+          <li>
+            <span class="contacts-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 5c0 9 6 15 15 15l-2-4-4 1c-3-1-6-4-7-7l1-4-3-2z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+            <a href="tel:+79285550042">+7 (928) 555-00-42</a>
+          </li>
+          <li>
+            <span class="contacts-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.7"/></svg></span>
+            <a href="mailto:elbrusfornew@gmail.com">elbrusfornew@gmail.com</a>
+          </li>
+          <li>
+            <span class="contacts-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 5L3 12l5 2 2 5 3-4 5 4 3-14z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+            <a href="https://t.me/elbrus_guide" target="_blank" rel="noopener">@elbrus_guide</a>
+          </li>
+          <li>
+            <span class="contacts-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6 7-12a7 7 0 10-14 0c0 6 7 12 7 12z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg></span>
+            <span class="contacts-text">Приэльбрусье, пос. Терскол</span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <svg class="brand-mark" viewBox="0 0 40 40" fill="none"><path d="M4 34L15 12l6 11 4-6 11 17H4z" fill="#E8622A"/><circle cx="31" cy="9" r="4" fill="#f5894f"/></svg>
+            <span>Эльбрус<b style="color:var(--sunrise)">.</b>Гид</span>
+          </a>
+          <p>Независимый путеводитель для тех, кто идёт на свою первую большую вершину. Информация носит образовательный характер.</p>
+          <a class="footer-mail" href="mailto:elbrusfornew@gmail.com">elbrusfornew@gmail.com</a>
+        </div>
+        <div>
+          <h4>Маршрут</h4>
+          <ul>
+            <li><a href="index.html#route">Этапы пути</a></li>
+            <li><a href="preparation.html">Акклиматизация</a></li>
+            <li><a href="preparation.html#nutrition">Питание</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Подготовка</h4>
+          <ul>
+            <li><a href="preparation.html">Физическая форма</a></li>
+            <li><a href="gear.html">Снаряжение</a></li>
+            <li><a href="preparation.html#ams">Высотная болезнь</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Помощь</h4>
+          <ul>
+            <li><a href="faq.html">Частые вопросы</a></li>
+            <li><a href="faq.html">Нужен ли гид</a></li>
+            <li><a href="faq.html">Стоимость</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Эльбрус.Гид · Сделано для начинающих альпинистов</span>
+        <span class="warn">⚠ Горы опасны — не выходите на маршрут без гида и оценки погоды</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="intro.js"></script>
+  <script src="snow.js"></script>
+  <script src="animations.js"></script>
+</body>
+</html>
